@@ -10,6 +10,12 @@ include_once 'commands/ConsoleMakeFlexController.php';
 include_once 'commands/ConsoleMakeFlexStyle.php';
 include_once 'commands/ConsoleMakeFlexTemplate.php';
 include_once 'commands/ConsoleMakeFlexScript.php';
+include_once 'commands/CommandRemove.php';
+include_once 'commands/ConsoleRemoveFlex.php';
+include_once 'commands/ConsoleRemoveFlexController.php';
+include_once 'commands/ConsoleRemoveFlexStyle.php';
+include_once 'commands/ConsoleRemoveFlexTemplate.php';
+include_once 'commands/ConsoleRemoveFlexScript.php';
 
 class Sage_Flex
 {
@@ -22,6 +28,11 @@ class Sage_Flex
 			'Motiontactic\Commands\ConsoleMakeFlexTemplate',
 			'Motiontactic\Commands\ConsoleMakeFlexScript',
 			'Motiontactic\Commands\ConsoleMakeFlex',
+			'Motiontactic\Commands\ConsoleRemoveFlexController',
+			'Motiontactic\Commands\ConsoleRemoveFlexStyle',
+			'Motiontactic\Commands\ConsoleRemoveFlexTemplate',
+			'Motiontactic\Commands\ConsoleRemoveFlexScript',
+			'Motiontactic\Commands\ConsoleRemoveFlex',
 		];
 
 		Console::starting( function ( $console ) use ( $commands ) {
