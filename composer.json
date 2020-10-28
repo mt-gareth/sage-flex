@@ -1,6 +1,6 @@
 {
   "name": "motiontactic/sage-flex",
-  "description": "Class to be extended to add boilerplate to WP-AJAX",
+  "description": "Extends Sage Acorn to add commands to scaffold flexible components quickly",
   "type": "library",
   "license": "MIT",
   "authors": [

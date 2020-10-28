@@ -4,6 +4,7 @@ namespace Motiontactic\Commands;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputOption;
 
 class ConsoleMakeFlex extends Command
 {
@@ -24,16 +25,24 @@ class ConsoleMakeFlex extends Command
 		];
 	}
 
+	protected function getOptions()
+	{
+		return [
+			[ 'no-scripts', 'N', InputOption::VALUE_NONE, 'Do Not Create Scripts' ],
+		];
+	}
+
 	public function handle()
 	{
 		$name = $this->argument( 'name' );
 		$template = $this->argument( 'template' );
-		if(!in_array($template, $this->template_options)) return $this->error( $template . " is not a valid Template" );
+		if ( !in_array( $template, $this->template_options ) ) return $this->error( $template . " is not a valid Template" );
 
 		$this->call( 'make:flex-controller', [ 'name' => $name, 'template' => $template ] );
 		$this->call( 'make:flex-style', [ 'name' => $name, 'template' => $template ] );
 		$this->call( 'make:flex-template', [ 'name' => $name, 'template' => $template ] );
-		$this->call( 'make:flex-script', [ 'name' => $name, 'template' => $template ] );
+		if ( !$this->option( 'no-scripts' ) )
+			$this->call( 'make:flex-script', [ 'name' => $name, 'template' => $template ] );
 		return $this->info( $name . " finished!" );
 	}
 
