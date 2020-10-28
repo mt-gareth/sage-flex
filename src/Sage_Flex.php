@@ -4,19 +4,6 @@ namespace Motiontactic;
 
 use Illuminate\Console\Application as Console;
 
-include_once 'commands/CommandMake.php';
-include_once 'commands/ConsoleMakeFlex.php';
-include_once 'commands/ConsoleMakeFlexController.php';
-include_once 'commands/ConsoleMakeFlexStyle.php';
-include_once 'commands/ConsoleMakeFlexTemplate.php';
-include_once 'commands/ConsoleMakeFlexScript.php';
-include_once 'commands/CommandRemove.php';
-include_once 'commands/ConsoleRemoveFlex.php';
-include_once 'commands/ConsoleRemoveFlexController.php';
-include_once 'commands/ConsoleRemoveFlexStyle.php';
-include_once 'commands/ConsoleRemoveFlexTemplate.php';
-include_once 'commands/ConsoleRemoveFlexScript.php';
-
 class Sage_Flex
 {
 	function __construct()

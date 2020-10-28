@@ -16,10 +16,8 @@
     "stoutlogic/acf-builder": "dev-master"
   },
   "autoload": {
-    "files": [
-      "src/FlexComponent.php",
-      "src/Flex.php",
-      "src/Sage_Flex.php"
-    ]
+    "psr-4": {
+      "Motiontactic\\": ["src"]
+    }
   }
 }
