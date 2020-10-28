@@ -1,0 +1,25 @@
+{
+  "name": "motiontactic/sage-flex",
+  "description": "Class to be extended to add boilerplate to WP-AJAX",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Gareth McDonald",
+      "email": "gareth@motiontactic.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.1",
+    "roots/acorn": "^1.1",
+    "stoutlogic/acf-builder": "dev-master"
+  },
+  "autoload": {
+    "files": [
+      "src/FlexComponent.php",
+      "src/Flex.php",
+      "src/Sage_Flex.php"
+    ]
+  }
+}

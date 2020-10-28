@@ -1,0 +1,10 @@
+export default {
+
+    init: function () {
+        this.bindEvents();
+    },
+
+    bindEvents: function () {
+        console.log('Running FlexNameDashes');
+    },
+};
