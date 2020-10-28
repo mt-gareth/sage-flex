@@ -4,7 +4,7 @@ namespace Motiontactic;
 
 use Illuminate\Console\Application as Console;
 
-class Sage_Flex
+class SageFlex
 {
 	function __construct()
 	{
@@ -32,4 +32,4 @@ class Sage_Flex
 	}
 }
 
-new Sage_Flex();
+new SageFlex();
