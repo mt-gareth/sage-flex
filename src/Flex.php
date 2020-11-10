@@ -7,13 +7,12 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
 class Flex
 {
 	private static $instance = null;
-	public $name = false;
+	public $name = 'flexible_sections';
 	public $sections = [];
 	public $flex;
 
 	public function __construct()
 	{
-		if ( !$this->name ) $this->name = $this->from_camel_case( get_class( $this ) );
 		$this->load_flexible_component_classes();
 		$this->build_flexible_components();
 		add_action( 'acf/init', [ $this, 'build' ] );

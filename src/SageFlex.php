@@ -20,6 +20,7 @@ class SageFlex
 			'Motiontactic\Commands\ConsoleRemoveFlexTemplate',
 			'Motiontactic\Commands\ConsoleRemoveFlexScript',
 			'Motiontactic\Commands\ConsoleRemoveFlex',
+			'Motiontactic\Commands\ConsolePublishFlex',
 		];
 
 		Console::starting( function ( $console ) use ( $commands ) {
@@ -28,7 +29,8 @@ class SageFlex
 			}
 		} );
 
-		new Flex();
+		Flex::getInstance();
+		new FlexComposer();
 	}
 }
 
