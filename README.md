@@ -13,6 +13,14 @@ To publish files required for all the features run you will be asked to overwrit
 ```
 wp acorn publish:flex
 ```
+these files will be added or updated:
+```text
+/app/View/Composers/Flex.php
+/resources/assets/scripts/app.js
+/resources/assets/styles/app.scss
+/resources/assets/scripts/flex/index.js
+/resources/assets/styles/flex/index.scss
+```
 
 ## Usage
 ### Commands
