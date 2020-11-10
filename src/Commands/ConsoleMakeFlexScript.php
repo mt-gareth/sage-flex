@@ -54,7 +54,7 @@ class ConsoleMakeFlexScript extends CommandMake
 
 	protected function makeIndexJs( $dir, $file )
 	{
-		$stub = file_get_contents( __DIR__ . '/stubs/flex/IndexJs.stub' );
+		$stub = file_get_contents( __DIR__ . '/stubs/flex/publish/IndexJs.stub' );
 		$this->makeFile( $dir, $file, $stub );
 		return $this->error( 'add "import Flex from \'./flex\';" and "Flex.init();" to app.js' );
 	}

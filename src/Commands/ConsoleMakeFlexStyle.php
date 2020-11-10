@@ -52,7 +52,7 @@ class ConsoleMakeFlexStyle extends CommandMake
 
 	protected function makeIndexScss( $dir, $file )
 	{
-		$stub = file_get_contents( __DIR__ . '/stubs/flex/IndexScss.stub' );
+		$stub = file_get_contents( __DIR__ . '/stubs/flex/publish/IndexScss.stub' );
 		$this->makeFile( $dir, $file, $stub );
 		return $this->error( 'add "@import \'flex/index\';" to app.scss' );
 	}

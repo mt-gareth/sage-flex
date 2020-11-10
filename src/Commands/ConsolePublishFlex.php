@@ -24,6 +24,8 @@ class ConsolePublishFlex extends Command
 			'/stubs/flex/publish/FlexComposer.stub' => [ 'dir' => '/app/View/Composers', 'file' => 'Flex.php' ],
 			'/stubs/flex/publish/AppJS.stub'        => [ 'dir' => '/resources/assets/scripts', 'file' => 'app.js' ],
 			'/stubs/flex/publish/AppScss.stub'      => [ 'dir' => '/resources/assets/styles', 'file' => 'app.scss' ],
+			'/stubs/flex/publish/IndexJs.stub'      => [ 'dir' => '/resources/assets/scripts/flex', 'file' => 'index.js' ],
+			'/stubs/flex/publish/IndexScss.stub'    => [ 'dir' => '/resources/assets/styles/flex', 'file' => 'index.scss' ],
 		];
 
 		foreach ( $files as $stub_file => $new_file ) {
@@ -38,7 +40,7 @@ class ConsolePublishFlex extends Command
 	{
 		if ( $this->files->isDirectory( $dir ) ) {
 			if ( $this->files->isFile( $file ) ) {
-				if ( $this->confirm( 'Do you wish to overwrite ' . $file . '?' ) ) {
+				if ( $this->confirm( 'Do you wish to overwrite ' . $file . '?', true ) ) {
 					$this->files->replace( $file, $stub );
 					return $this->info( "$file overwritten!" );
 				} else {
