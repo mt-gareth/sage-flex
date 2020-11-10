@@ -7,7 +7,11 @@ Extends Sage Acorn to add commands to scaffold flexible components quickly
 
 In sage theme run
 ```
-$ composer require motiontactic/sage-flex
+composer require motiontactic/sage-flex
+```
+To publish files required for all the features run you will be asked to overwrite if the file exists, if you have not edited the file you can accept
+```
+wp acorn publish:flex
 ```
 
 ## Usage
@@ -17,7 +21,12 @@ $ composer require motiontactic/sage-flex
 ```text
 wp acorn make:flex ComponentName
 ```
-where ComponentName is the name of the new flexible component you would like made.
+Where ComponentName is the name of the new flexible component you would like made, should be in CamelCase.
+
+```text
+wp acorn remove:flex ComponentName
+```
+Where ComponentName is the name of the old flexible component you would like removed, should be in CamelCase.
 
 #### Other Commands
 ```text
@@ -25,10 +34,15 @@ wp acorn make:flex-controller ComponentName
 wp acorn make:flex-script ComponentName
 wp acorn make:flex-style ComponentName
 wp acorn make:flex-template ComponentName
-```
-Each command makes a single file.
 
-#### An Optional Template Can Be Added To Any Command
+wp acorn remove:flex-controller ComponentName
+wp acorn remove:flex-script ComponentName
+wp acorn remove:flex-style ComponentName
+wp acorn remove:flex-template ComponentName
+```
+Each command makes or removes a single file.
+
+#### An Optional Template Can Be Added To Any Make Command
 
 ```text
 wp acorn make:flex ComponentName template
