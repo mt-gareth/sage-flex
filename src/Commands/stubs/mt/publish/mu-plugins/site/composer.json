@@ -1,0 +1,30 @@
+{
+  "repositories": [
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "1.2.3",
+        "type": "wordpress-muplugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k=b3JkZXJfaWQ9MTU2NDE0fHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxOS0wMy0yNiAxNjo1OTo1OA==&t=5.9.3"
+        },
+        "require": {
+          "composer/installers": "^1.4",
+          "ffraenz/private-composer-installer": "^5.0"
+        }
+      }
+    }
+  ],
+  "extra": {
+    "installer-paths": {
+      "{$name}": [
+        "type:wordpress-muplugin"
+      ]
+    }
+  },
+  "require": {
+    "advanced-custom-fields/advanced-custom-fields-pro": "*"
+  }
+}

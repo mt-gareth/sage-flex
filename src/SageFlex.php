@@ -21,6 +21,8 @@ class SageFlex
 			'Motiontactic\Commands\ConsoleRemoveFlexScript',
 			'Motiontactic\Commands\ConsoleRemoveFlex',
 			'Motiontactic\Commands\ConsolePublishFlex',
+			'Motiontactic\Commands\ConsolePublishBaseFiles',
+			'Motiontactic\Commands\ConsolePublishAcf',
 			'Motiontactic\Commands\ConsolePublishMt',
 		];
 

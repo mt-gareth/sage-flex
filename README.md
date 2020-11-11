@@ -9,9 +9,9 @@ In sage theme run
 ```
 composer require motiontactic/sage-flex
 ```
-To publish files required for all the features run you will be asked to overwrite if the file exists, if you have not edited the file you can accept
+To publish files that are used in most sites run:
 ```
-wp acorn publish:flex
+wp acorn publish:mt
 ```
 these files will be added or updated:
 ```text
@@ -20,13 +20,7 @@ these files will be added or updated:
 /resources/assets/styles/app.scss
 /resources/assets/scripts/flex/index.js
 /resources/assets/styles/flex/index.scss
-```
-To publish files that are used in most sites run:
-```
-wp acorn publish:mt
-```
-these files will be added or updated:
-```text
+
 /resources/assets/scripts/common/index.js
 /resources/assets/scripts/common/responsive-bgs.js
 
@@ -40,6 +34,10 @@ these files will be added or updated:
 
 /resources/views/partials/bg.blade.php
 /resources/views/partials/content-page.blade.php
+
+mu-plugins/site.php
+mu-plugins/site/composer.json
+mu-plugins/site/advanced-custom-fields-pro
 ```
 ## Usage
 ### Commands
@@ -68,6 +66,13 @@ wp acorn remove:flex-style ComponentName
 wp acorn remove:flex-template ComponentName
 ```
 Each command makes or removes a single file.
+
+```text
+wp acorn publish:flex
+wp acorn publish:base-files
+wp acorn publish:acf
+```
+Each command published files that are used on most sites.
 
 #### An Optional Template Can Be Added To Any Make Command
 
