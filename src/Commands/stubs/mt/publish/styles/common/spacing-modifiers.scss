@@ -1,0 +1,63 @@
+.padding-top {
+	&-0 {
+		padding-top: 0;
+	}
+
+	&-25 {
+		padding-top: 25px;
+	}
+
+	&-50 {
+		padding-top: 50px;
+
+		@include media($large) {
+			padding-top: 15px;
+		}
+	}
+
+	&-100 {
+		padding-top: 100px;
+
+		@include media($large) {
+			padding-top: 50px;
+		}
+	}
+
+	&-150 {
+		padding-top: 150px;
+
+		@include media($large) {
+			padding-top: 50px;
+		}
+	}
+}
+
+.padding-bottom {
+	&-0 {
+		padding-bottom: 0;
+	}
+
+	&-25 {
+		padding-bottom: 25px;
+	}
+
+	&-50 {
+		padding-bottom: 50px;
+	}
+
+	&-100 {
+		padding-bottom: 100px;
+
+		@include media($large) {
+			padding-bottom: 50px;
+		}
+	}
+
+	&-150 {
+		padding-bottom: 150px;
+
+		@include media($large) {
+			padding-bottom: 50px;
+		}
+	}
+}

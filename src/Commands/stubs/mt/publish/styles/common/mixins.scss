@@ -1,0 +1,64 @@
+// rem size calc
+@function rem($size) {
+	$remSize: $size / 16px;
+	@return #{$remSize}rem;
+}
+
+@mixin media( $breakpoint ) {
+	@include media-below($breakpoint) {
+		@content;
+	}
+}
+
+@mixin media-above( $breakpoint ) {
+	@media (min-width: $breakpoint) {
+		@content;
+	}
+}
+
+@mixin media-below( $breakpoint ) {
+	@media (max-width: $breakpoint - 0.02px) {
+		@content;
+	}
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {
+		@content
+	}
+	&:-moz-placeholder {
+		@content
+	}
+	&::-moz-placeholder {
+		@content
+	}
+	&:-ms-input-placeholder {
+		@content
+	}
+}
+
+@mixin all-titles {
+	h1, h2, h3, h4, h5, h6 {
+		@content
+	}
+}
+
+@mixin grid-container($grid: $neat-grid) {
+	@if $grid != $neat-grid {
+		@warn "`grid-container` does not use grid propertes. Custom grids do not need to be passed in to this mixin . ";
+	}
+
+	&::after {
+		clear: both;
+		content: "";
+		display: block;
+	}
+}
+
+@mixin ie-min-height-fix {
+	&:after {
+		content: "";
+		min-height: inherit;
+		font-size: 0;
+	}
+}

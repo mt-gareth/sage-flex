@@ -1,0 +1,16 @@
+h1, h2, h3, h4, h5, h6 {
+	letter-spacing: 1px;
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+p {
+	font-size: rem(16px);
+	margin-top: 0;
+	line-height: 25px;
+
+	@include media($large) {
+		font-size: rem(16px);
+		line-height: 30px;
+	}
+}

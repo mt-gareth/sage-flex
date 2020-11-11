@@ -1,0 +1,184 @@
+$neat-grid: (
+		columns: 12,
+		gutter: 20px,
+);
+
+.content-container {
+	margin: 0 auto;
+	width: 90%;
+	max-width: $desktop-max;
+	@include grid-container;
+
+	&.max-700 {
+		max-width: 700px;
+	}
+
+	&.max-800 {
+		max-width: 800px;
+	}
+
+	&.max-950 {
+		max-width: 950px;
+	}
+
+	&.max-1200 {
+		max-width: 1200px;
+	}
+
+	&.max-1530 {
+		max-width: 1530px;
+	}
+
+	&.has-cols {
+		width: calc(90% + (#{map-get($neat-grid, gutter)} * 2));
+		max-width: calc(#{$desktop-max} + (#{map-get($neat-grid, gutter)} * 2));
+
+		@include media-below($medium) {
+			width: 90%;
+			max-width: 90%;
+		}
+	}
+}
+
+.row {
+	@include grid-container;
+}
+
+.grid-collapse {
+	@include grid-collapse;
+
+	@include media-below($large) {
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+@for $i from 1 through 12 {
+	.col-#{$i} {
+		min-height: 1px;
+		@include grid-column($i);
+
+		@include media-below($large) {
+			float: none;
+			width: 100%;
+			margin-left: 0;
+		}
+
+		&:not(:last-child) {
+			@include media-below($large) {
+				margin-bottom: 25px;
+			}
+		}
+	}
+}
+
+@for $i from 1 through 12 {
+	.col-#{$i}-centered {
+		width: calc(((90% / 12) * #{$i}));
+		margin: 0 auto;
+
+		@include media-below($large) {
+			width: 100%;
+		}
+	}
+}
+
+@for $i from 1 through 12 {
+	$ratio: 100 / 12 * $i;
+	$ratio_percent: 100% / 12 * $i;
+	$gutter: map-get($neat-grid, gutter) * (($ratio / 100) + 1);
+
+	.flex-col-#{$i} {
+		margin-left: 20px;
+		min-height: 1px;
+		flex: 1 0 #{$ratio_percent};
+		flex: 1 0 calc((#{$ratio_percent} - #{$gutter}));
+		max-width: calc(#{$ratio_percent} - #{$gutter});
+
+		@include media-below($large) {
+			flex: 1 0 100%;
+			max-width: 100%;
+			margin-left: 0;
+		}
+
+		&:not(:last-child) {
+			@include media-below($large) {
+				margin-bottom: 25px;
+			}
+		}
+	}
+	.flex-col-d-#{$i} {
+		margin-left: 20px;
+
+		@include media-below($extra-large) {
+			flex: 1 0 calc((#{$ratio_percent} - #{$gutter}));
+			max-width: calc(#{$ratio_percent} - #{$gutter});
+		}
+	}
+	.flex-col-tl-#{$i} {
+		margin-left: 20px;
+
+		@include media-below($large) {
+			flex: 1 0 calc((#{$ratio_percent} - #{$gutter}));
+			max-width: calc(#{$ratio_percent} - #{$gutter});
+		}
+	}
+	.flex-col-t-#{$i} {
+		margin-left: 20px;
+
+		@include media-below($medium) {
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+
+	.flex-col-m-#{$i} {
+		margin-left: 20px;
+
+		@include media-below($small) {
+			width: 100%;
+			margin: 0 auto;
+		}
+	}
+}
+
+.flex-col-12 {
+	margin-left: map-get($neat-grid, gutter) / 2;
+	margin-right: map-get($neat-grid, gutter) / 2;
+}
+
+@for $i from 1 through 12 {
+	.fw-flex-col-#{$i} {
+		min-height: 1px;
+		flex: 1 0 calc((100% / 12) * #{$i});
+	}
+}
+
+.flex-row {
+	display: flex;
+	flex-wrap: wrap;
+
+	&:after {
+		display: none;
+	}
+}
+
+.align-columns {
+	&-center {
+		justify-content: center;
+	}
+
+	&-right {
+		justify-content: flex-end;
+	}
+
+	&-spaced {
+		justify-content: space-between;
+	}
+}
+
+.align-content {
+	&-center {
+		align-items: center;
+	}
+}

@@ -21,6 +21,7 @@ class SageFlex
 			'Motiontactic\Commands\ConsoleRemoveFlexScript',
 			'Motiontactic\Commands\ConsoleRemoveFlex',
 			'Motiontactic\Commands\ConsolePublishFlex',
+			'Motiontactic\Commands\ConsolePublishMt',
 		];
 
 		Console::starting( function ( $console ) use ( $commands ) {
