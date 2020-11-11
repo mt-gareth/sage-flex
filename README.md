@@ -21,7 +21,26 @@ these files will be added or updated:
 /resources/assets/scripts/flex/index.js
 /resources/assets/styles/flex/index.scss
 ```
+To publish files that are used in most sites run:
+```
+wp acorn publish:mt
+```
+these files will be added or updated:
+```text
+/resources/assets/scripts/common/index.js
+/resources/assets/scripts/common/responsive-bgs.js
 
+/resources/assets/styles/common/fonts.scss
+/resources/assets/styles/common/global.scss
+/resources/assets/styles/common/grid.scss
+/resources/assets/styles/common/index.scss
+/resources/assets/styles/common/mixins.scss
+/resources/assets/styles/common/spacing-modifiers.scss
+/resources/assets/styles/common/variables.scss
+
+/resources/views/partials/bg.blade.php
+/resources/views/partials/content-page.blade.php
+```
 ## Usage
 ### Commands
 

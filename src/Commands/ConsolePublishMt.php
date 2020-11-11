@@ -20,5 +20,6 @@ class ConsolePublishMt extends CommandPublish
 		'/stubs/mt/publish/styles/common/variables.scss' => [ 'dir' => '/resources/assets/styles/common', 'file' => 'variables.scss' ],
 
 		'/stubs/mt/publish/views/partials/bg.blade.php' => [ 'dir' => '/resources/views/partials', 'file' => 'bg.blade.php' ],
+		'/stubs/mt/publish/views/partials/content-page.blade.php' => [ 'dir' => '/resources/views/partials', 'file' => 'content-page.blade.php' ],
 	];
 }
