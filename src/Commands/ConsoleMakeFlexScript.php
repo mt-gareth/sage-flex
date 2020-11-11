@@ -11,7 +11,7 @@ class ConsoleMakeFlexScript extends CommandMake
 	protected function getStub()
 	{
 		$template = $this->argument( 'template' );
-		return __DIR__ . "/stubs/flex/templates/$template/Script.stub";
+		return __DIR__ . "/stubs/flex/templates/$template/Script.js";
 	}
 
 	protected function getFileName( $name )
@@ -54,7 +54,7 @@ class ConsoleMakeFlexScript extends CommandMake
 
 	protected function makeIndexJs( $dir, $file )
 	{
-		$stub = file_get_contents( __DIR__ . '/stubs/flex/publish/IndexJs.stub' );
+		$stub = file_get_contents( __DIR__ . '/stubs/flex/publish/IndexJs.js' );
 		$this->makeFile( $dir, $file, $stub );
 		return $this->error( 'add "import Flex from \'./flex\';" and "Flex.init();" to app.js' );
 	}

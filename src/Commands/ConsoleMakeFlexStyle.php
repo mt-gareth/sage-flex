@@ -11,7 +11,7 @@ class ConsoleMakeFlexStyle extends CommandMake
 	protected function getStub()
 	{
 		$template = $this->argument( 'template' );
-		return __DIR__ . "/stubs/flex/templates/$template/Style.stub";
+		return __DIR__ . "/stubs/flex/templates/$template/Style.scss";
 	}
 
 	protected function getFileName( $name )
@@ -52,7 +52,7 @@ class ConsoleMakeFlexStyle extends CommandMake
 
 	protected function makeIndexScss( $dir, $file )
 	{
-		$stub = file_get_contents( __DIR__ . '/stubs/flex/publish/IndexScss.stub' );
+		$stub = file_get_contents( __DIR__ . '/stubs/flex/publish/IndexScss.scss' );
 		$this->makeFile( $dir, $file, $stub );
 		return $this->error( 'add "@import \'flex/index\';" to app.scss' );
 	}

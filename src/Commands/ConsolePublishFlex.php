@@ -21,11 +21,11 @@ class ConsolePublishFlex extends Command
 	public function handle()
 	{
 		$files = [
-			'/stubs/flex/publish/FlexComposer.stub' => [ 'dir' => '/app/View/Composers', 'file' => 'Flex.php' ],
-			'/stubs/flex/publish/AppJS.stub'        => [ 'dir' => '/resources/assets/scripts', 'file' => 'app.js' ],
-			'/stubs/flex/publish/AppScss.stub'      => [ 'dir' => '/resources/assets/styles', 'file' => 'app.scss' ],
-			'/stubs/flex/publish/IndexJs.stub'      => [ 'dir' => '/resources/assets/scripts/flex', 'file' => 'index.js' ],
-			'/stubs/flex/publish/IndexScss.stub'    => [ 'dir' => '/resources/assets/styles/flex', 'file' => 'index.scss' ],
+			'/stubs/flex/publish/FlexComposer.php' => [ 'dir' => '/app/View/Composers', 'file' => 'Flex.php' ],
+			'/stubs/flex/publish/AppJS.js'        => [ 'dir' => '/resources/assets/scripts', 'file' => 'app.js' ],
+			'/stubs/flex/publish/AppScss.scss'      => [ 'dir' => '/resources/assets/styles', 'file' => 'app.scss' ],
+			'/stubs/flex/publish/IndexJs.js'      => [ 'dir' => '/resources/assets/scripts/flex', 'file' => 'index.js' ],
+			'/stubs/flex/publish/IndexScss.scss'    => [ 'dir' => '/resources/assets/styles/flex', 'file' => 'index.scss' ],
 		];
 
 		foreach ( $files as $stub_file => $new_file ) {

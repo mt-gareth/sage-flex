@@ -21,7 +21,7 @@ class CommandMake extends Command
 
 	protected function getStub()
 	{
-		return __DIR__ . '/stubs/flex/Script.stub';
+		return __DIR__ . '/stubs/flex/Script.js';
 	}
 
 	protected function getFileName( $name )

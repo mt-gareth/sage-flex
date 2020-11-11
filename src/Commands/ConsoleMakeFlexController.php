@@ -11,7 +11,7 @@ class ConsoleMakeFlexController extends CommandMake
 	protected function getStub()
 	{
 		$template = $this->argument( 'template' );
-		return __DIR__ . "/stubs/flex/templates/$template/Controller.stub";
+		return __DIR__ . "/stubs/flex/templates/$template/Controller.php";
 	}
 
 	protected function getFileName( $name )
