@@ -1,5 +1,5 @@
-@if(have_rows('motiontactic_flex'))
-    @while(have_rows('motiontactic_flex')) @php(the_row())
+@if(have_rows('flexible_sections'))
+    @while(have_rows('flexible_sections')) @php(the_row())
     @includeIf('flex.' . get_row_layout())
     @endwhile
 @endif
