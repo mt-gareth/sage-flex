@@ -41,13 +41,11 @@ class Flex
 		foreach ( $this->sections as $section ) {
 			$this->flex->getField( $this->name )->addLayout( $section->fields() );
 		}
-
-		$this->flex->setLocation( 'post_type', '==', 'page' )
-			->or( 'post_type', '==', 'post' );
 	}
 
 	public function build()
 	{
+		$this->flex = apply_filters( 'mt_flexible_component_before_build', $this->flex );
 		\acf_add_local_field_group( $this->flex->build() );
 	}
 
