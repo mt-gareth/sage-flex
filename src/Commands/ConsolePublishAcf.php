@@ -2,9 +2,17 @@
 
 namespace Motiontactic\Commands;
 
+use Symfony\Component\Console\Input\InputOption;
+
 class ConsolePublishAcf extends CommandPublish
 {
 	protected $name = 'publish:acf';
+	protected function getOptions()
+	{
+		return [
+			[ 'force', 'F', InputOption::VALUE_NONE, 'Force Filer Overwrite' ],
+		];
+	}
 	protected $description = 'Add ACF To mu-plugins';
 	protected $type = 'Console command';
 	protected $publish_files = [

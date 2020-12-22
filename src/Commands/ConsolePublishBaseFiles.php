@@ -2,9 +2,17 @@
 
 namespace Motiontactic\Commands;
 
+use Symfony\Component\Console\Input\InputOption;
+
 class ConsolePublishBaseFiles extends CommandPublish
 {
 	protected $name = 'publish:base-files';
+	protected function getOptions()
+	{
+		return [
+			[ 'force', 'F', InputOption::VALUE_NONE, 'Force Filer Overwrite' ],
+		];
+	}
 	protected $description = 'Add in the default files for Motion Tactic';
 	protected $type = 'Console command';
 	protected $publish_files = [

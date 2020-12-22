@@ -2,9 +2,17 @@
 
 namespace Motiontactic\Commands;
 
+use Symfony\Component\Console\Input\InputOption;
+
 class ConsolePublishFlex extends CommandPublish
 {
 	protected $name = 'publish:flex';
+	protected function getOptions()
+	{
+		return [
+			[ 'force', 'F', InputOption::VALUE_NONE, 'Force Filer Overwrite' ],
+		];
+	}
 	protected $description = 'Add in the default files for flex';
 	protected $type = 'Console command';
 	protected $publish_files = [
