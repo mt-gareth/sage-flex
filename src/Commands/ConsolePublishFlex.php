@@ -13,5 +13,6 @@ class ConsolePublishFlex extends CommandPublish
 		'/stubs/flex/publish/AppScss.scss'     => [ 'dir' => '/resources/assets/styles', 'file' => 'app.scss' ],
 		'/stubs/flex/publish/IndexJs.js'       => [ 'dir' => '/resources/assets/scripts/flex', 'file' => 'index.js' ],
 		'/stubs/flex/publish/IndexScss.scss'   => [ 'dir' => '/resources/assets/styles/flex', 'file' => 'index.scss' ],
+		'/stubs/flex/publish/Filters.php'   => [ 'dir' => '/app', 'file' => 'filters.php' ],
 	];
 }

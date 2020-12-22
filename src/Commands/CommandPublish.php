@@ -39,7 +39,7 @@ class CommandPublish extends Command
 	{
 		if ( $this->files->isDirectory( $dir ) ) {
 			if ( $this->files->isFile( $file ) ) {
-				if ( $this->confirm( 'Do you wish to overwrite ' . $file . '?', true ) ) {
+				if ( $this->option('force') || $this->confirm( 'Do you wish to overwrite ' . $file . '?', true ) ) {
 					$this->files->replace( $file, $stub );
 					return $this->info( "$file overwritten!" );
 				} else {
