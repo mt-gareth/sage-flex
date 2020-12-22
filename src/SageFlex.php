@@ -24,6 +24,7 @@ class SageFlex
 			'Motiontactic\Commands\ConsolePublishBaseFiles',
 			'Motiontactic\Commands\ConsolePublishAcf',
 			'Motiontactic\Commands\ConsolePublishMt',
+			'Motiontactic\Commands\ConsoleAddFlex',
 		];
 
 		Console::starting( function ( $console ) use ( $commands ) {
