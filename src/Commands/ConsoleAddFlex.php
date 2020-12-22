@@ -3,12 +3,21 @@
 namespace Motiontactic\Commands;
 
 use Illuminate\Console\Command;
+use Symfony\Component\Console\Input\InputArgument;
 
 class ConsoleAddFlex extends Command
 {
-	protected $name = 'add:flex {flex} {post_id}';
+	protected $name = 'add:flex';
 	protected $description = 'Add Flex to a post';
 	protected $type = 'Console command';
+
+	protected function getArguments()
+	{
+		return [
+			[ 'flex', InputArgument::REQUIRED, 'The name of the flex class' ],
+			[ 'post_id', InputArgument::REQUIRED, 'The post_id of the post' ],
+		];
+	}
 
 	public function handle()
 	{
