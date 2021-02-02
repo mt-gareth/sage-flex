@@ -28,7 +28,7 @@ class ConsoleMakeFlex extends Command
 	protected function getOptions()
 	{
 		return [
-			[ 'no-scripts', 'N', InputOption::VALUE_NONE, 'Do Not Create Scripts' ],
+			[ 'scripts', 'Y', InputOption::VALUE_NONE, 'Add Create Scripts' ],
 		];
 	}
 
@@ -41,7 +41,7 @@ class ConsoleMakeFlex extends Command
 		$this->call( 'make:flex-controller', [ 'name' => $name, 'template' => $template ] );
 		$this->call( 'make:flex-style', [ 'name' => $name, 'template' => $template ] );
 		$this->call( 'make:flex-template', [ 'name' => $name, 'template' => $template ] );
-		if ( !$this->option( 'no-scripts' ) )
+		if ( $this->option( 'scripts' ) )
 			$this->call( 'make:flex-script', [ 'name' => $name, 'template' => $template ] );
 		return $this->info( $name . " finished!" );
 	}
