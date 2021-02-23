@@ -21,6 +21,9 @@ class FlexNameCap extends FlexComponent
 	{
 		$fields = $this->builder( $this->name );
 		$fields
+			->addTrueFalse( 'hide_section', [
+				'ui'          => 1,
+			] )
 			->addSelect( 'type', [ 'choices' => [
 				'type1'   => 'Type 1',
 				'type2'    => 'Type 2',
