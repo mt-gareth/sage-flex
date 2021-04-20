@@ -33,7 +33,7 @@ class ConsoleMakeFlexStyle extends CommandMake
 
 	protected function updateIndexScss()
 	{
-		$index_dir = \get_theme_file_path() . '/resources/assets/styles/flex/';
+		$index_dir = \get_theme_file_path() . '/resources/styles/flex/';
 		$index_path = $index_dir . 'index.scss';
 		if ( !$this->files->isFile( $index_path ) ) $this->makeIndexScss( $index_dir, $index_path );
 

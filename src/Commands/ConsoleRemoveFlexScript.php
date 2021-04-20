@@ -16,7 +16,7 @@ class ConsoleRemoveFlexScript extends CommandRemove
 
 	protected function getPath()
 	{
-		return \get_theme_file_path() . '/resources/assets/scripts';
+		return \get_theme_file_path() . '/resources/scripts';
 	}
 
 	public function handle()
@@ -27,7 +27,7 @@ class ConsoleRemoveFlexScript extends CommandRemove
 
 	protected function updateIndexJs()
 	{
-		$index_dir = \get_theme_file_path() . '/resources/assets/scripts/flex/';
+		$index_dir = \get_theme_file_path() . '/resources/scripts/flex/';
 		$index_path = $index_dir . 'index.js';
 		if ( !$this->files->isFile( $index_path ) ) return $this->info( 'Index.js was not there' );
 

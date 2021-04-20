@@ -33,7 +33,7 @@ class ConsoleMakeFlexScript extends CommandMake
 
 	protected function updateIndexJs()
 	{
-		$index_dir = \get_theme_file_path() . '/resources/assets/scripts/flex/';
+		$index_dir = \get_theme_file_path() . '/resources/scripts/flex/';
 		$index_path = $index_dir . 'index.js';
 		if ( !$this->files->isFile( $index_path ) ) $this->makeIndexJs( $index_dir, $index_path );
 

@@ -4,6 +4,7 @@ namespace Motiontactic\Commands;
 
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputOption;
 
 class ConsoleRemoveFlex extends Command
 {
@@ -18,6 +19,13 @@ class ConsoleRemoveFlex extends Command
 		];
 	}
 
+	protected function getOptions()
+	{
+		return [
+			[ 'scripts', 'Y', InputOption::VALUE_NONE, 'Also Remove Scripts' ],
+		];
+	}
+
 	public function handle()
 	{
 		$name = $this->argument( 'name' );
@@ -25,7 +33,8 @@ class ConsoleRemoveFlex extends Command
 		$this->call( 'remove:flex-controller', [ 'name' => $name ] );
 		$this->call( 'remove:flex-style', [ 'name' => $name ] );
 		$this->call( 'remove:flex-template', [ 'name' => $name ] );
-		$this->call( 'remove:flex-script', [ 'name' => $name ] );
+		if ( $this->option( 'scripts' ) )
+			$this->call( 'remove:flex-script', [ 'name' => $name ] );
 
 		return $this->info( $name . " finished!" );
 	}

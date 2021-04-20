@@ -16,7 +16,7 @@ class ConsoleRemoveFlexStyle extends CommandRemove
 
 	protected function getPath()
 	{
-		return \get_theme_file_path() . '/resources/assets/styles';
+		return \get_theme_file_path() . '/resources/styles';
 	}
 
 	public function handle()
@@ -28,7 +28,7 @@ class ConsoleRemoveFlexStyle extends CommandRemove
 	protected function updateIndexScss()
 	{
 
-		$index_dir = \get_theme_file_path() . '/resources/assets/styles/flex/';
+		$index_dir = \get_theme_file_path() . '/resources/styles/flex/';
 		$index_path = $index_dir . 'index.scss';
 		if ( !$this->files->isFile( $index_path ) ) return $this->info( 'Index.scss was not there' );
 
