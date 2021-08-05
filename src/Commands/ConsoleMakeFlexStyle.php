@@ -22,7 +22,7 @@ class ConsoleMakeFlexStyle extends CommandMake
 
 	protected function getPath()
 	{
-		return \get_theme_file_path() . '/resources/assets/styles';
+		return \get_theme_file_path() . '/resources/styles';
 	}
 
 	public function handle()

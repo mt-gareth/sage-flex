@@ -24,9 +24,9 @@ class FlexNameCap extends FlexComponent
 			->addTrueFalse( 'hide_section', [
 				'ui'          => 1,
 			] )
-			->addSelect( 'type', [ 'choices' => [
-				'type1'   => 'Type 1',
-				'type2'    => 'Type 2',
+			->addSelect( 'layout', [ 'choices' => [
+				'layout1'   => 'Layout 1',
+				'layout2'    => 'Layout 2',
 			] ] );
 		return $fields;
 	}
@@ -35,7 +35,7 @@ class FlexNameCap extends FlexComponent
 	{
 		return [
 			'content',
-			'type'
+			'layout'
 		];
 	}
 }
