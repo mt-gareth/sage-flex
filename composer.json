@@ -13,7 +13,7 @@
   "require": {
     "php": ">=7.1",
     "roots/acorn": ">=2.0.0",
-    "stoutlogic/acf-builder": "dev-master"
+    "stoutlogic/acf-builder": ">=1.12.0"
   },
   "autoload": {
     "psr-4": {
